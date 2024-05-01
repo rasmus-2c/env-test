@@ -6,6 +6,10 @@ jobs:
   greet:
     environment: Prod
     runs-on: ubuntu-latest
+    env:
+      ARG2: ${{ secrets.ARG2 }}
+      ARG3: ${{ secrets.ARG3 }}
+      ARG4: ${{ secrets.ARG4 }}
     steps:
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -15,3 +19,4 @@ jobs:
         uses: actions/checkout@v2
       - name: Run Python Script
         run: python print.py ${{ env.ARG2 }} ${{ env.ARG3 }} ${{ env.ARG4 }}
+
