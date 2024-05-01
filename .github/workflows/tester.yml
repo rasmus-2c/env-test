@@ -1,4 +1,4 @@
-name: ENV arguments
+name: Tester
 on:
   workflow_dispatch:
 

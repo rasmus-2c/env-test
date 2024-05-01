@@ -31,4 +31,4 @@ jobs:
       
       - name: Run Python Script
         #run: python print.py "${{ github.event.inputs.argument_1 }}" "${{ github.event.inputs.argument_2 }}" "${{ github.event.inputs.argument_3 }}"
-        run: python print.py "${{ secrets.ARG1 }}" "${{ env.ARG2 }}" "${{ env.ARG3 }}"
+        run: python print.py "${{ secrets.ARG2 }}" "${{ env.ARG3 }}" "${{ env.ARG4 }}"
