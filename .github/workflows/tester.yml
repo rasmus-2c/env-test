@@ -1,0 +1,17 @@
+name: ENV arguments
+on:
+  workflow_dispatch:
+
+jobs:
+  greet:
+    environment: Prod
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Run Python Script
+        run: python print.py ${{ secrets.ARG1 }} ${{ github.event.inputs.ARG2 }} ${{ github.event.inputs.ARG3 }}
