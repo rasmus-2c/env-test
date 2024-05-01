@@ -1,5 +1,20 @@
 name: ENV arguments
 on:
+  workflow_dispatch:
+    inputs:
+
+      argument_1:
+        description: 'Insert argument 1'
+        required: true
+
+      argument_2:
+        description: 'Insert argument 2'
+        required: true
+
+      argument_3:
+        description: 'Insert argument 3'
+        required: true
+
 jobs:
   greet:
     environment: Prod
