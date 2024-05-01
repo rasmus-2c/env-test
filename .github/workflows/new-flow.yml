@@ -1,0 +1,31 @@
+name: Pass Environment Variables to Python Script
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    environment: 
+      name: PROD
+      url: https://github.com/rasmus-2c/env-test/settings/environments/2835198370/edit
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    
+    - name: Run Python script
+      run: python print.py
+      env:
+        VAR1: ${{ secrets.ARG1 }}
+        VAR2: ${{ secrets.ARG2 }}
+        VAR3: ${{ secrets.ARG3 }}
+

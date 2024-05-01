@@ -19,6 +19,17 @@ if __name__ == "__main__":
     print_three_arguments(arg1, arg2, arg3)
 '''
 
-print(ARG2)
-print(ARG3)
-print(ARG4)
+import os
+
+def main():
+    var1 = os.environ.get('VAR1')
+    var2 = os.environ.get('VAR2')
+    var3 = os.environ.get('VAR3')
+    
+    print("VAR1:", var1)
+    print("VAR2:", var2)
+    print("VAR3:", var3)
+
+if __name__ == "__main__":
+    main()
+
