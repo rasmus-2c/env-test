@@ -19,6 +19,6 @@ jobs:
       - name: Run Python Script
         run: python print.py
         env:
-          ARG2: ${{ env.ARG1 }}
+          ARG1: ${{ env.ARG1 }}
           ARG2: ${{ env.ARG2 }}
           ARG3: ${{ env.ARG3 }}
