@@ -30,4 +30,4 @@ jobs:
         uses: actions/checkout@v2
       
       - name: Run Python Script
-        run: python print.py "${{ secrets.ARG1 }}" "${{ env.ARG2 }}" "${{ env.ARG3 }}"
+        run: python print.py "${{ env.ARG2 }}" "${{ env.ARG2 }}" "${{ env.ARG3 }}"
