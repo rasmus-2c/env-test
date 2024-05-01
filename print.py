@@ -1,4 +1,3 @@
-'''
 import sys
 
 def print_three_arguments(arg1, arg2, arg3):
@@ -18,7 +17,6 @@ if __name__ == "__main__":
 
     print_three_arguments(arg1, arg2, arg3)
 '''
-
 import os
 
 def main():
@@ -32,4 +30,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
+'''
