@@ -1,3 +1,4 @@
+'''
 import sys
 
 def print_three_arguments(arg1, arg2, arg3):
@@ -16,3 +17,8 @@ if __name__ == "__main__":
     arg3 = sys.argv[3]
 
     print_three_arguments(arg1, arg2, arg3)
+'''
+
+print(ARG2)
+print(ARG3)
+print(ARG4)
