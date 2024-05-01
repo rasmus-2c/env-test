@@ -1,10 +1,10 @@
-name: ENV arguments
+name: Print variables (DEV)
 on:
   workflow_dispatch:
 
 jobs:
   greet:
-    environment: Prod
+    environment: DEV
     runs-on: ubuntu-latest
     steps:
 
@@ -17,8 +17,4 @@ jobs:
         uses: actions/checkout@v2
       
       - name: Run Python Script
-        run: python print.py
-        env:
-          ARG1: ${{ env.ARG1 }}
-          ARG2: ${{ env.ARG2 }}
-          ARG3: ${{ env.ARG3 }}
+        run: python print.py "${{ vars.ARG1 }}" "${{ vars.ARG2 }}" "${{ vars.ARG3 }}"
