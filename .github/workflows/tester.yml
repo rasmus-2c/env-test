@@ -14,4 +14,4 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
       - name: Run Python Script
-        run: python print.py "${{ github.event.inputs.ARG2 }}" "${{ github.event.inputs.ARG3 }}" "${{ github.event.inputs.ARG4 }}"
+        run: python print.py "${{ env.ARG2 }}" "${{ env.ARG3 }}" "${{ env.ARG4 }}"
