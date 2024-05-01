@@ -25,7 +25,7 @@ jobs:
     - name: Run Python script
       run: python print.py
       env:
-        VAR1: ${{ secrets.ARG1 }}
-        VAR2: ${{ secrets.ARG2 }}
-        VAR3: ${{ secrets.ARG3 }}
+        VAR1: ${{ vars.ARG1 }}
+        VAR2: ${{ vars.ARG2 }}
+        VAR3: ${{ vars.ARG3 }}
 
