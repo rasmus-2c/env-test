@@ -1,4 +1,4 @@
-name: Pass Environment Variables to Python Script
+name: New flow
 
 on:
   push:
