@@ -8,11 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.10'
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      - name: Run Python Script
-        run: python print.py ${{ env.ARG2 }} ${{ env.ARG3 }} ${{ env.ARG4 }}
+        run: echo "ARG2: $ARG2, ARG3: $ARG3, ARG4: $ARG4"
+        shell: bash
+        env:
+          ARG2: ${{ env.ARG2 }}
+          ARG3: ${{ env.ARG3 }}
+          ARG4: ${{ env.ARG4 }}
 
