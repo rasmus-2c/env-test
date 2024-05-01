@@ -1,0 +1,32 @@
+name: Fetch arguments
+on:
+  workflow_dispatch:
+    inputs:
+
+      argument_1:
+        description: 'Insert argument 1'
+        required: true
+
+      argument_2:
+        description: 'Insert argument 2'
+        required: true
+
+      argument_3:
+        description: 'Insert argument 3'
+        required: true
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      
+      - name: Run Python Script
+        run: python print.py "${{ github.event.inputs.argument_1 }}" "${{ github.event.inputs.argument_2 }}" "${{ github.event.inputs.argument_3 }}"
